@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Encriptador de Textos</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="assets/logo.png" alt="logo alura">
+      <h1 class="header__titulo">{Encriptador de Textos}</h1>
+    </header>
+    <main class="container">
+      <div class="container__izquierda">
+        <div class="encriptador">
+          <textarea
+            class="texto"
+            id="texto"
+            cols="30"
+            rows="10"
+            placeholder="Ingrese el texto aqui"
+          ></textarea>
+        </div>
+        <div>
+          <p class="terminos"><i class='bx bx-error-alt' ></i> Solo letras minúsculas y sin acentos.</p>
+        </div>
+        <div class="botones">
+          <button class="btn__encriptar" id="btn__encriptar" onclick="encriptar()" type="button">Encriptar</button>
+          <button class="btn__desencriptar" id="btn__desencriptar" onclick="desencriptar()" type="button">Desencriptar</button>
+        </div>
+      </div>
+      <div class="container__derecha">
+        <div class="encriptado">
+          <p class="texto__encriptado" id="texto__encriptado"></p>
+          <img class="encriptado__img" src="assets/lupa.png" alt="imagen muñeco" />
+          <div>
+            <h2 class="titulo__encriptado" id="titulo__encriptado">Ningún mensaje encriptrado</h2>
+            <button class="btn__copiar" id="btn__copiar" onclick="copiar()" type="button" style="display: none;">Copiar</button>
+            <p class="mensajeCopiado" id="mensajeCopiado">¡Mensaje copiado!</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__texto">
+        <p>Desarrollado por Darío Alejandro Fernández</p>
+      </div>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/dalefer21/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+        <a href="https://www.instagram.com/alejandrofernandez.21/" target="_blank"><i class='bx bxl-instagram'></i></a>
+      </div>
+      
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
